@@ -10,9 +10,9 @@ Pooling and calculating premium from historical data has always been an importan
 Recognising this issue, a prototype is introduced to rely on soft & high frequency data to supplement the 'lag' between each publication and hence insurance companies could not only get a near real time risk profile for the mortality in the country but also it can help better lower the risk and hence more competitive premium offer to the end customers for Life  insurance products such as Term Insurance (renew every year) or even extend it to critical illness suite in the future.
 
 
-## Methodology 
+## Methodology(Methodology/Methodology)
 
-## R Code
+## R Code(RCode/Rcode)
 
 ## Reference
 
