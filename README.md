@@ -7,7 +7,9 @@
 Pooling and calculating premium from historical data has always been an important methodology for insurance companies to price their products.  Despite the good reference from data published, such as [The Institute for Health Metrics and Evaluation (IHME)](http://ghdx.healthdata.org/record/united-states-mortality-rates-county-1980-2014), which contain annual county-level age-standardized mortality rates for 21 mutually exclusive causes of death from 1980 to 2014, the frequency of the dataset makes it hard, if not possible to make any just-in-time commerical decision. 
 
 
-Recognising this issue, a prototype is introduced to rely on soft & high frequency data to supplement the 'lag' between each publication and hence insurance companies could not only get a near real time risk profile for the mortality in the country but also it can help better lower the risk and hence more competitive premium offer to the end customers for Life  insurance products such as [Term Insurance](https://www.prudential.com/personal/life-insurance/find-life-insurance-policy/term-life-products) (renew every year) or even extend it to critical illness suite in the future.
+Recognising this issue, a prototype (near real time mortality prediction) analytic engine is introduced to base on soft & high frequency data to supplement the 'lag' between each publication.
+
+Hence insurance companies could better understand their risk profile and in this case they can price more competitively to the customers for Life insurance products such as [Term Insurance](https://www.prudential.com/personal/life-insurance/find-life-insurance-policy/term-life-products). Furthermore, the analytic engine can even extend to the critical illness suite in the future.
 
 
 ## Methodology
