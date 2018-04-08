@@ -44,33 +44,28 @@ $$ mortality = y = f(x1,x2, ..., x19) $$
 
 ## Choosing the right model & models turning
 
-First of all, we are going to split the dataset into training, development set and testing set in ratio 8:1:1
+First of all, we are going to split the dataset into training, development set and testing set in ratio 8-1-1
+
+Hyper-parameter turning in training and development sets and the aim is to maximise the predictive power of the models which will be measured in the testing set
+
+In Random Forest Regression, despite it won't overfit, but it has been suggested to keep the max-features as one-third of the variables so as to reduce the bias
+
+![randomForest.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/randomForest.png)
+
+In Artificial Neutral Network, there are numerous hyper parameters to turn such as the architecture of the hidden layers, activation functions and so on. We can apply stochastic gradient descent optimization method to prevent get stuck at the local minimum and also implement drop-out layer to make the neural network less prone to overfiting
+
+![ANN.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/ANN.png)
 
 We can think of the total error as
 
 $$ Errors = Bias + Variance + Irreducible error $$
 
-By comparing Out-of-sample testing from the test size, we are able to tell which models work the best
-
-Below is a summary of the result using mean absolute error (mae)
-
-Moreover for the model tuning, by compare the training set and development set, we are able to test the bias and overfitting
-
-and there are some hyper-parameter turning for various models.
-
-In Random Forest Regression, despite won't over fit, but research has suggested to keep the max-features as one-third of the variables so as to bring more variance to the each of the tree and hence less bias.
-
-![randomForest.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/randomForest.png)
-
-In Artificial Neutral Network, there are numerous hyper parameters to turn such as the architecture of the hidden layers, activation functions and so on. We can also apply stochastic gradient descent optimization method to prevent get track at the local minimum and also random drop out layer to make the neural network less prone to overfit.
-
-![ANN.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/ANN.png)
-
-
-Out-of-sample MAE
+Out-of-sample mean absolute error:
 
     Random Forest:
               ANN:
+
+Hence, we are able to tell which models work the best
 
 ## Variable selections/Importance
 
