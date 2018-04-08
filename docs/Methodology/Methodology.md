@@ -147,7 +147,7 @@ Mean Residual Deviance :  242.1336
 
 In conclude, we favor Random Forest for this small data set
 
-## Variable selections/Importance
+## Variable Importances
 
 Continue with the model selection and feature selections, we can check the variable importance from the model we just trained
 
@@ -182,11 +182,11 @@ Variable Importances:
 
 ## Second step - time series data analysis
 
-With the features we found in the previous step, we carry out time series analysis for the US mortality as a whole
+With the features we extracted the previous step, we carry out time series forecast for the US mortality
 
-As we have monthly Google Trend from the top five features and the annual data from IHME, we could apply Mixed Data Sampling Regression
+As we have monthly Google Trend from the top five features and the annual data from IHME, we could apply [Mixed Data Sampling Regression](https://cran.r-project.org/web/packages/midasr/midasr.pdf)
 
-The general idea is to aggregate higher frequency data and to predict the trend
+The general idea is to aggregate higher frequency data set and apply multivariate time series analysis
 
 ![Rplot.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/Rplot.png)
 

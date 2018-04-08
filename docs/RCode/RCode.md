@@ -1,4 +1,4 @@
-<h1 align="center">Methodology</h1>
+<h1 align="center">R Code</h1>
 
 ```R
 setwd('/Users/steven/Documents/myWorks/dataMining/R/Prudential')
