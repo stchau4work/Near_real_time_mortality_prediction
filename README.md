@@ -6,15 +6,23 @@
 
 Pooling and calculating premium from historical data has always been an important methodology for insurance companies to price their products.  Despite the good reference from data published, such as [The Institute for Health Metrics and Evaluation (IHME)](http://ghdx.healthdata.org/record/united-states-mortality-rates-county-1980-2014), which contain annual county-level age-standardized mortality rates for 21 mutually exclusive causes of death from 1980 to 2014, the frequency of the dataset makes it hard, if not possible to make any just-in-time commerical decision. 
 
+## New solutions - new analytic engine
 
-Recognising this issue, a prototype (near real time mortality prediction) analytic engine is introduced to base on soft & high frequency data to supplement the 'lag' between each publication.
-
-Hence insurance companies could better understand their risk profile and in this case they can price more competitively to the customers for Life insurance products such as [Term Insurance](https://www.prudential.com/personal/life-insurance/find-life-insurance-policy/term-life-products). Furthermore, the analytic engine can even extend to the critical illness suite in the future.
+Recognising this issue, a prototype (near real time mortality prediction) analytic engine is introduced to base on soft & high frequency data to supplement the 'lag' between each publication
 
 
-## Methodology
+## Better Track of the risk Profile
 
-## R Code
+Insurance companies could better understand their risk profile for the estimated mortality rate in the next publication. This gain in accuracy and time can yield a substantial benefit in making all kinds of decision especially in this compeitive business environement. 
+
+
+## Make Insurance cheaper
+
+In this case, Insurance Companies can price more aggressively to the target customers customers for life insurance products such as [Term Insurance](https://www.prudential.com/personal/life-insurance/find-life-insurance-policy/term-life-products) as now they have more confidence in reduce the price of the premium and then boost the volume. 
+
+## Extensibility in the Future
+Lastly, the analytic engine can also extend to any products which is not benefit from the high frequency dataset, for instance, prediciting flu claims.
+
 
 ## Reference
 
