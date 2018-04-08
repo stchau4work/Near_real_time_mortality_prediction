@@ -21,10 +21,10 @@ Now, it is where the creativity comes in, we need to make some educated guess on
       x3 = # of esophageal cancer in 2014
       x4 = # of lymphoma cancer queries in 2014
       x5 = # of leukemia cancer queries in 2014
-     x6 = # of stomach cancer queries in 2014
+      x6 = # of stomach cancer queries in 2014
       x7 = # of liver cancer queries in 2014
       x8 = # of pancreatkc cancer queries in 2014
-     x9 = # of lung cancer queries in 2014
+      x9 = # of lung cancer queries in 2014
      x10 = # of skin cancer queries in 2014
      x11 = # of colon cancer queries in 2014
      x12 = # of cavocal cancer queries in 2014
@@ -38,30 +38,40 @@ Now, it is where the creativity comes in, we need to make some educated guess on
 
 Then we apply machine learning models to find the relationship between these queries and the corresponding mortality rate from IHME dataset
 
-$$ mortality rate = y = f(x1,x2, ..., x19) $$
+$$ mortality_rate = y_hat = f(x1,x2, ..., x19) $$
 
-## Choosing the right models
+## Choosing the right model & models turning
 
-First of all, we are going to split the dataset into training, developement set and testing set in ratio 8:1:1
+First of all, we are going to split the dataset into training, development set and testing set in ratio 8:1:1
 
 We can think of the total error as
 
-$$ Total errors = Bias + Variance + Irreducitble error $$
+$$ Total errors = Bias + Variance + Irreducible error $$
 
 By comparing Out-of-sample testing from the test size, we are able to tell which models work the best
 
 Below is a summary of the result using mean absolute error (mae)
 
-Morever for the model tuning, by compare the training set and developement set, we are able to test the bias and overfitting
+Moreover for the model tuning, by compare the training set and development set, we are able to test the bias and overfitting
 
-and there are some hyperparameter turning for various models.
+and there are some hyper-parameter turning for various models.
 
-In random forest, despite won't overfit, but research has suggested to keep the max-features as one-third of the variables so as to bring more variance to the each of the tree and hence less bias.
+In Random Forest Regression, despite won't over fit, but research has suggested to keep the max-features as one-third of the variables so as to bring more variance to the each of the tree and hence less bias.
 
-In ANN, there are numerous hyperparameters to turn such as the architecture of the hidden layers, activation functions and so on. We can also apply stochastic gradient descent optimaiztion method to prevent get track at the local minimum and also random drop out layer to make the neural network less prone to overfitting.
+![randomForest.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/randomForest.png)
 
+In Artificial Neutral Network, there are numerous hyper parameters to turn such as the architecture of the hidden layers, activation functions and so on. We can also apply stochastic gradient descent optimization method to prevent get track at the local minimum and also random drop out layer to make the neural network less prone to overfitting.
+
+![ANN.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/ANN.png)
+
+
+Out-of-sample testing accuracy
+
+    Random Forest:
+              ANN:
 
 ## Variable selections/Importance
+
 
 ## Second step - time series data
 
