@@ -12,7 +12,9 @@ Google Trend provide high frequency dataset up to hourly basis and the data cove
 
 ## First step to identify the web query
 
-We start with something simple. By taking a static screenshot at year of 2014 and with a focus on Neoplasms (one of the major causes of death), we are trying to relate the queries to the IHME dataset.
+We start with something simple. By taking a static screenshot at year of 2014 and with a dedicated focus on Neoplasms (one of the major causes of death), we try to relate the queries with the IHME dataset
+
+![geoMap.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/geoMap.png)
 
 Now, it is where the creativity comes in, we need to make some educated guess on the web queries and extract their trends for around 50 regions in the United State
 
@@ -36,9 +38,9 @@ Now, it is where the creativity comes in, we need to make some educated guess on
      x18 = # of brain cancer queries in 2014
      x19 = # of thyroid cancer queries in 2014
 
-Then we apply machine learning models to find the relationship between these queries and the corresponding mortality rate from IHME dataset
+Then we apply machine learning models to find the relationship between these counts of queries and the corresponding mortality rate from IHME dataset
 
-$$ mortality_rate = y_hat = f(x1,x2, ..., x19) $$
+$$ mortality = y = f(x1,x2, ..., x19) $$
 
 ## Choosing the right model & models turning
 
@@ -46,7 +48,7 @@ First of all, we are going to split the dataset into training, development set a
 
 We can think of the total error as
 
-$$ Total errors = Bias + Variance + Irreducible error $$
+$$ Errors = Bias + Variance + Irreducible error $$
 
 By comparing Out-of-sample testing from the test size, we are able to tell which models work the best
 
@@ -60,12 +62,12 @@ In Random Forest Regression, despite won't over fit, but research has suggested 
 
 ![randomForest.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/randomForest.png)
 
-In Artificial Neutral Network, there are numerous hyper parameters to turn such as the architecture of the hidden layers, activation functions and so on. We can also apply stochastic gradient descent optimization method to prevent get track at the local minimum and also random drop out layer to make the neural network less prone to overfitting.
+In Artificial Neutral Network, there are numerous hyper parameters to turn such as the architecture of the hidden layers, activation functions and so on. We can also apply stochastic gradient descent optimization method to prevent get track at the local minimum and also random drop out layer to make the neural network less prone to overfit.
 
 ![ANN.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/ANN.png)
 
 
-Out-of-sample testing accuracy
+Out-of-sample MAE
 
     Random Forest:
               ANN:
