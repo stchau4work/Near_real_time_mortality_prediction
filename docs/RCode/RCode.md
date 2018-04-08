@@ -48,7 +48,6 @@ summary(rf_fit)
 
 y_hat <- h2o.predict(rf_fit, newdata=test[-21])
 
-#6.813934
 mae(test[21],y_hat)
 
 #model 2
@@ -66,7 +65,6 @@ summary(ann_fit)
 
 y_hat <- h2o.predict(ann_fit, newdata=test[-21])
 
-#4.387634
 mae(test[21],y_hat)
 
 
