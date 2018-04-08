@@ -58,7 +58,7 @@ In Artificial Neutral Network, there are numerous hyper parameters to turn such 
 
 ![ANN.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/ANN.png)
 
-We can think of the total error as
+When selecting the models, we consider the errors
 
 $$ Errors = Bias + Variance + Irreducible error $$
 
@@ -67,9 +67,9 @@ Out-of-sample mean absolute error:
     Random Forest: 5.720633
               ANN: 6.549579
 
-However, as the dataset is small and hence the above is not reliable result but for illustration purpose
+However, as the size of the data is not big enough to draw any conclusion, the process has demonstrated the essential ideas for choosing the model
 
-From the result of random forest we observe that there are 50 trees with max_depth as 7
+In addition, a closer look at the training result of random forest we observe that there are 50 trees with max_depth as 7
 
 The errors in both training set and validation set are roughly the same, which is a good sign
 
@@ -104,9 +104,9 @@ Mean Residual Deviance :  198.3843
 
 ```
 
-From the result of ANN we have 2 hidden layers and there are over 400 nodes which makes it impossible to train the model as the parameters are way more than the training set.
+From the result of ANN we have 2 hidden layers and there are over 400 nodes which makes it impossible to train the model with the given amount of data
 
-As a result the validation set has higher error than training set and it is suggested the model has memorized the pattern
+As a result the validation set has higher errors and it is suggested the model has memorized the patterns rather than learning
 
 ```r
 
@@ -145,12 +145,44 @@ Mean Residual Deviance :  242.1336
 ```
 
 
-In conclude, we favor Random Forest for this small data set.
+In conclude, we favor Random Forest for this small data set
 
 ## Variable selections/Importance
 
+Continue with the model selection and feature selections, we can check the variable importance from the model we just trained.
+
+In this case it is from random forest
+
+```R
+Variable Importances: (Extract with `h2o.varimp`)
+=================================================
+
+Variable Importances:
+                    variable relative_importance scaled_importance percentage
+1     stomach cancer: (2014)       112874.351562          1.000000   0.233193
+2     ovarian cancer: (2014)        63937.492188          0.566448   0.132092
+3  pancreatic cancer: (2014)        53483.789062          0.473835   0.110495
+4        skin cancer: (2014)        34494.417969          0.305600   0.071264
+5      breast cancer: (2014)        33791.617188          0.299374   0.069812
+6       liver cancer: (2014)        31891.388672          0.282539   0.065886
+7    cervical cancer: (2014)        24498.271484          0.217040   0.050612
+8        lung cancer: (2014)        23561.511719          0.208741   0.048677
+9      colon  cancer: (2014)        20909.589844          0.185247   0.043198
+10 testicular cancer: (2014)        15674.990234          0.138871   0.032384
+11     kidney cancer: (2014)        12881.189453          0.114120   0.026612
+12       oral cancer: (2014)         9982.496094          0.088439   0.020623
+13      brain cancer: (2014)         9459.253906          0.083803   0.019542
+14    thyroid cancer: (2014)         9090.477539          0.080536   0.018781
+15   prostate cancer: (2014)         8613.831055          0.076313   0.017796
+16 esophageal cancer: (2014)         7718.527832          0.068382   0.015946
+17    bladder cancer: (2014)         6169.616211          0.054659   0.012746
+18   lymphoma cancer: (2014)         5004.554688          0.044337   0.010339
+
+```
 
 ## Second step - time series data
+
+
 
 ## Applying nowcasting technique to nowcast the mortality rate
 

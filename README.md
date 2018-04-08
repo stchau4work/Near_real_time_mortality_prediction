@@ -13,12 +13,12 @@ Recognising this issue, a prototype (near real time mortality prediction) analyt
 
 ## Better Track of the Risk Profile
 
-Insurance companies could better understand their risk profile for the estimated mortality rate in the next publication. This gain in accuracy and time can yield a substantial benefit in making all kinds of decision especially in this competitive business environment. 
+With the new analytic engine, Insurance companies could better understand their risk profile for the estimated mortality rate in the next publication. This gain in accuracy and time can yield a substantial benefit in making all kinds of decision especially in this competitive business environment.
 
 
 ## Make Insurance Cheaper
 
-In this case, Insurance Companies can price more aggressively to the target customers for life insurance products such as [Term Insurance](https://www.prudential.com/personal/life-insurance/find-life-insurance-policy/term-life-products) as now they have more confidence in reduce the price of the premium and then boost the volume. 
+With the new analytic engine, Insurance Companies can price more aggressively to target customers for life insurance products such as [Term Insurance](https://www.prudential.com/personal/life-insurance/find-life-insurance-policy/term-life-products) as now they are more confidence in the cost control and this can yield potential turnover.
 
 ## Extensibility 
 
