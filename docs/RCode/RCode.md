@@ -1,8 +1,6 @@
 <h1 align="center">R Code</h1>
 
 ```R
-setwd('/Users/steven/Documents/myWorks/dataMining/R/Prudential')
-
 lapply(c('data.table','ggplot2','h2o','ggthemes','midasr'), require, character.only=T)
 
 # data from Google Trend
