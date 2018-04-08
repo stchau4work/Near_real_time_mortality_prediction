@@ -1,4 +1,4 @@
-<h1 align="center">Near Real Time Mortality Prediction Prototype</h1>
+<h1 align="center">Near Real-Time Mortality Prediction Prototype</h1>
 
 <p align="center"><img src="https://img.shields.io/badge/Author-Steven%20Chau-blue.svg"></p>
 
@@ -8,17 +8,17 @@ Pooling and calculating premium from historical data has always been an importan
 
 ## Solutions - New Analytic Engine
 
-Recognising this issue, a prototype (near real time mortality prediction) analytic engine is introduced to base on soft & high frequency data to supplement the 'lag' between each publication
+Recognising this issue, a prototype (near real-time mortality prediction) analytic engine is introduced to base on soft & high frequency data to supplement the 'lag' between each publication
 
 
 ## Better Track of the Risk Profile
 
-With the new analytic engine, insurance companies could better understand their risk profile for the estimated mortality rate in the next publication. This gain in accuracy and time can yield a substantial benefit in making all kinds of decision especially in this competitive business environment.
+With the new analytic engine, insurance companies could better understand their risk profile for the estimated mortality rate in the next publication. This gain in accuracy and time can yield a substantial benefit in making all kinds of decision, especially in this competitive business environment.
 
 
 ## Make Insurance Cheaper
 
-With the new analytic engine, insurance companies can price more aggressively to target customers for life insurance products such as [Term Insurance](https://www.prudential.com/personal/life-insurance/find-life-insurance-policy/term-life-products) as now they are more confidence in the cost control and this can yield potential turnover.
+With the new analytic engine, insurance companies can price more aggressively to target customers for life insurance products such as [Term Insurance](https://www.prudential.com/personal/life-insurance/find-life-insurance-policy/term-life-products) as now they are more confident in the cost control and this can yield potential turnover.
 
 ## Extensibility 
 

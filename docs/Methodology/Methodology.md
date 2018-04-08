@@ -4,15 +4,15 @@
 
 Machine Learning is to learn patterns from data. Living in a world that is full of data points, insurance companies could leverage on this to devise better algorithms for various decision making. To illustrate this, I have first sourced the dataset from [Google trend](https://trends.google.com/trends).
 
-Knowing that there are more channels to provide higher frequency dataset, given the time constrain, one who in the further look for more alternative dataset
+Knowing that there are more channels to provide higher frequency dataset, given the time constraint, one who in the further look for the more alternative dataset
 
 ![googleTrend.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/googleTrend.png)
 
-Google Trend provide high frequency dataset up to hourly basis and the data coverage is since 2004
+Google Trend provide high-frequency dataset up to hourly basis and the data coverage is since 2004
 
 ## First step to identify the web query - feature extraction
 
-We start with something simple. By taking a static screenshot at year of 2014 and with a dedicated focus on Neoplasms (one of the major causes of death), we try to relate the queries with the IHME dataset
+We start with something simple. By taking a static screenshot at the year of 2014 and with a dedicated focus on Neoplasms (one of the major causes of death), we try to relate the queries with the IHME dataset
 
 ![geoMap.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/geoMap.png)
 
@@ -48,13 +48,13 @@ First of all, we are going to split the dataset into training, development set a
 
 Hyper-parameter turning in training and development sets which aim to maximise the predictive power of the models
 
-In this exercise we try to play around Random Forest Regression and Neural Network to predict the Mortality Rate
+In this exercise, we try to play with Random Forest Regression and Neural Network to predict the Mortality Rate
 
 In Random Forest Regression, despite it won't overfit, but it has been suggested to keep the max-features as one-third of the variables so as to reduce the bias
 
 ![randomForest.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/randomForest.png)
 
-In Artificial Neutral Network, there are numerous hyper parameters to turn such as the architecture of the hidden layers, activation functions and so on. We will apply stochastic gradient descent optimization method and drop out layer to prevent get stuck at the local minimum / not overfitting
+In Artificial Neural Network, there are numerous hyper parameters to turn such as the architecture of the hidden layers, activation functions and so on. We will apply stochastic gradient descent optimization method and drop out layer to prevent get stuck at the local minimum / not overfitting
 
 ![ANN.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/ANN.png)
 
@@ -106,7 +106,7 @@ Mean Residual Deviance :  198.3843
 
 From the result of ANN we have 2 hidden layers and there are over 400 nodes which makes it impossible to train the model with the given amount of data
 
-As a result the validation set has higher errors and it is suggested the model has memorized the patterns rather than learning
+As a result, the validation set has higher errors and it is suggested the model has memorized the patterns rather than learning
 
 ```R
 
@@ -145,9 +145,9 @@ Mean Residual Deviance :  242.1336
 ```
 
 
-In conclude, we favor Random Forest for this small data set
+In conclude, we favor Random Forest for this small dataset
 
-## Variable Importances
+## Variable Importance
 
 Continue with the model selection and feature selections, we can check the variable importance from the model we just trained
 
