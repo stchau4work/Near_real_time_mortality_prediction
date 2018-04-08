@@ -54,7 +54,7 @@ In Random Forest Regression, despite it won't overfit, but it has been suggested
 
 ![randomForest.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/randomForest.png)
 
-In Artificial Neutral Network, there are numerous hyper parameters to turn such as the architecture of the hidden layers, activation functions and so on. We will apply stochastic gradient descent optimization method and drop out layer to prevent get stuck at the local minimum / not overfiting
+In Artificial Neutral Network, there are numerous hyper parameters to turn such as the architecture of the hidden layers, activation functions and so on. We will apply stochastic gradient descent optimization method and drop out layer to prevent get stuck at the local minimum / not overfitting
 
 ![ANN.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/ANN.png)
 
@@ -73,7 +73,7 @@ In addition, a closer look at the training result of random forest we observe th
 
 The errors in both training set and validation set are roughly the same, which is a good sign
 
-```r
+```R
 
 H2ORegressionModel: drf
 Model Key:  DRF_model_R_1522509496627_19
@@ -108,7 +108,7 @@ From the result of ANN we have 2 hidden layers and there are over 400 nodes whic
 
 As a result the validation set has higher errors and it is suggested the model has memorized the patterns rather than learning
 
-```r
+```R
 
 H2ORegressionModel: deeplearning
 Model Key:  DeepLearning_model_R_1522509496627_20
@@ -149,9 +149,9 @@ In conclude, we favor Random Forest for this small data set
 
 ## Variable selections/Importance
 
-Continue with the model selection and feature selections, we can check the variable importance from the model we just trained.
+Continue with the model selection and feature selections, we can check the variable importance from the model we just trained
 
-In this case it is from random forest
+In this case, we listed the variable importance computed by Random Forest Regression model
 
 ```R
 Variable Importances: (Extract with `h2o.varimp`)
@@ -180,11 +180,16 @@ Variable Importances:
 
 ```
 
-## Second step - time series data
+## Second step - time series data analysis
 
+With the features we found in the previous step, we carry out time series analysis for the US mortality as a whole
 
+As we have monthly Google Trend from the top five features and the annual data from IHME, we could apply Mixed Data Sampling Regression
 
-## Applying nowcasting technique to nowcast the mortality rate
+The general idea is to aggregate higher frequency data and to predict the trend
+
+![Rplot.png](https://raw.githubusercontent.com/stchau4work/Near_real_time_mortality_prediction/master/docs/Methodology/Rplot.png)
+
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -194,4 +199,3 @@ MathJax.Hub.Config({
 </script>
 
 <script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=default"></script>
-
